@@ -3,11 +3,10 @@ import pandas as pd
 import re
 
 # open messages file and stations file
-# TODO
 raw_data = pd.read_json(
-    r'C:\Users\emeri\OneDrive\Documents\Python Scripts\Projet Controleurs_Spotteurs\V2 - 2023\result.json')
+    r'result.json')
 stations = pd.read_excel(
-    r'C:\Users\emeri\OneDrive\Documents\Python Scripts\Projet Controleurs_Spotteurs\V2 - 2023\Zurich Stations.xlsx')
+    r'Zurich_Stations.xlsx')
 
 # NORMALIZE JSON AND CLEANING ============================================================
 # json normalize
@@ -85,8 +84,7 @@ print("% messages with station NOT extracted : ", 1 - percent_station_found)
 # ADD STATION COORDINATES TO DATAFRAME ============================================================
 # keep only rows with station found on dataframe
 data_unmapped = data[data['station'].isna()]['text_before_cleaning']
-#TODO
-data_unmapped.to_excel(r'C:\Users\emeri\OneDrive\Documents\Python Scripts\Projet Controleurs_Spotteurs\V2 - 2023\data_unmapped.xlsx')
+data_unmapped.to_excel(r'data_unmapped.xlsx')
 data = data[~data['station'].isna()]
 
 # remove duplicate rows (for different train/bus lines) in Station dataframe
@@ -100,7 +98,6 @@ data = data.merge(stations,
                   right_on='Station').drop(['Station', 'ligne'], axis=1)
 
 # export dataframe to excel
-# TODO
 data.to_excel(
-    r'C:\Users\emeri\OneDrive\Documents\Python Scripts\Projet Controleurs_Spotteurs\V2 - 2023\data.xlsx')
+    r'data.xlsx')
 print("file saved to excel")

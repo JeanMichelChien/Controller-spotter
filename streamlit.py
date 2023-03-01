@@ -109,13 +109,11 @@ if menu_selected == "Dashboard":
     # create heatmap
     mapObj = folium.Map(location=[47.3686498, 8.5391825], zoom_start=11)
     folium.TileLayer('openstreetmap').add_to(mapObj)
-    # TODO
-    mapObj.save(r'C:\Users\emeri\OneDrive\Documents\Python Scripts\Projet Controleurs_Spotteurs\V2 - 2023\output.html')
+    mapObj.save(r'output.html')
     HeatMap(data=data_selected_heatmap_list,  # plot data selected on map
             radius=7,
             blur=1).add_to(mapObj)
-    # TODO
-    mapObj.save(r'C:\Users\emeri\OneDrive\Documents\Python Scripts\Projet Controleurs_Spotteurs\V2 - 2023\output.html')
+    mapObj.save(r'output.html')
     st_map = st_folium(
         mapObj,
         width=700,
