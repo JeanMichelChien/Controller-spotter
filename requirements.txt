@@ -3,3 +3,4 @@ streamlit-folium
 matplotlib
 streamlit-option-menu
 pandas
+openpyxl
