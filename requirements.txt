@@ -2,3 +2,4 @@ folium
 streamlit-folium
 matplotlib
 streamlit-option-menu
+pandas
