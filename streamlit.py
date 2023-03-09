@@ -119,6 +119,8 @@ if menu_selected == "Dashboard":
         width=700,
         height=450
     )
+    
+    st.write("Disclaimer: these data are presented for educational purposes only and are not representative of reality. The author of these visualisations is not responsible for the use of this information by third parties.")
 
 # ----------------------- ON MENU 2: STATISTICS: -----------------------
 # No slicers or filtering on this page
@@ -177,5 +179,7 @@ if menu_selected == "Statistics":
     st.write("total number of controls : ", total_number_controls)
     st.write("average number of controls per day : ", total_number_controls / timedelta_days)
     st.write("count of unique stations controlled : ", count_stations_controlled)
+    
+    st.write("Disclaimer: these data are presented for educational purposes only and are not representative of reality. The author of these visualisations is not responsible for the use of this information by third parties.")
 
 
