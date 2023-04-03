@@ -46,8 +46,6 @@ menu_selected = option_menu(
 # ------------- IMPORT DATASET FROM OTHER FILE --------------------------
 
 data = Controler_spotter_mainfile.data.copy()  # get dataframe from other file
-# data = pd.read_excel(
-# r"C:\Users\emeri\OneDrive\Documents\Python Scripts\Projet Controleurs_Spotteurs\V2 - 2023\data.xlsx")
 
 # ----------------------- SLICERS VALUES ----------------------------------------
 hours = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19",
